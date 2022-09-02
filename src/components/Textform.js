@@ -18,7 +18,7 @@ export default function Textform(props) {
     // capitalize txt 
     // firstely convert the array after use the loop in  array
     const textCapitalize=()=>{
-        const word = text.split(" ");
+        const word = text.split(/\s+/);
         // loop
         for (let i=0; i<word.length; i++){
             word[i]= word[i][0].toUpperCase() + word[i].substring(1);
@@ -42,9 +42,10 @@ export default function Textform(props) {
         console.log("changed");
         setText(event.target.value)
     }
+    
     // no of words*
     const text_length = () => {
-        const noOfwords = text.split(" ");
+        const noOfwords = text.split(/\s+/);
         return noOfwords.filter(word => word !== "").length;
     }
 
