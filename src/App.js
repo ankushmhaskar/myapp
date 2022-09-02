@@ -4,14 +4,14 @@ import Navbar from './components/Navbar';
 import Textform from './components/Textform';
 import React, { useState } from 'react';
 import Alert from './components/Alert';
-import About from './components/About';
+// import About from './components/About';
 
 
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route
-} from "react-router-dom";
+// import {
+//   BrowserRouter as Router,
+//   Routes,
+//   Route
+// } from "react-router-dom";
 
 
 function App() {
@@ -52,16 +52,17 @@ function App() {
 
   return (
     <>
-      <Router>
+      {/* <Router> */}
         <Navbar title="Rectjs" link="About us" mode={mode} modeDark={modeDark} />
         <Alert alert={alert} />
         <div className='container my-3'>
-          <Routes>
-            <Route exact path="about" element={<About />} />
-            <Route exact path="home" element={<Textform heading="Enter the text" mode={mode} />} />
-          </Routes>
+          {/* <Routes> */}
+            {/* <Route exact path="about" element={<About />} /> */}
+            {/* <Route exact path="home" element={<Textform heading="Enter the text" mode={mode} />} />
+          </Routes> */}
+          <Textform heading="Enter the text" mode={mode} />
         </div>
-      </Router>
+      {/* </Router> */}
       <Darkmode mode={mode} />
     </>
   );
